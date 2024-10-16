@@ -1,0 +1,33 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /recipe-console
+      settings:
+        trace: false
+        web-allow-others: false
+  datasource:
+    url: jdbc:h2:mem:recipe-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;NON_KEYWORDS=USER,VALUE
+    username: recipeadmin
+    password: recipepwd
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        use_sql_comments: true
+        format_sql: true
+    open-in-view: false
+server:
+  servlet:
+    context-path: /api/v1
+jwt:
+  secretKey: s4gEpf/rCF6imgl58k6JZitXut7F2bpW0oFSI1Wk5xY=
+recipe:
+  recommendation:
+    location: Berlin
+    apiKey: BEYYVVN47K5QU66343KJX8G76
+    t1: 0
+    t2: 2
